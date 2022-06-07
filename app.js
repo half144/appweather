@@ -17,7 +17,7 @@ function getWeather() {
     dayTemp.innerHTML = ""
     const city = input.value
     const key = '4ae9be7e0ff7408493d181328220606'
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=1&aqi=no&alerts=no`
+    const url = `https://cors-everywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=1&aqi=no&alerts=no`
     fetch(url)
         .then(res => res.json())
         .then((data) => {
